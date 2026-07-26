@@ -1,0 +1,69 @@
+:root {
+    --tg-bg: var(--tg-theme-bg-color, #0f1220);
+    --tg-text: var(--tg-theme-text-color, #e6e8f0);
+    --tg-hint: var(--tg-theme-hint-color, #8a8fa8);
+    --tg-button: var(--tg-theme-button-color, #5b7fff);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, Roboto, sans-serif;
+    background: var(--tg-bg);
+    color: var(--tg-text);
+    padding-bottom: 24px;
+}
+
+.app-header {
+    padding: 16px;
+    text-align: center;
+}
+
+.app-header h1 { margin: 0; font-size: 1.1rem; }
+
+.app-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+.stat-card, .chart-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--tg-hint);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.chart-card h2 {
+    font-size: 0.85rem;
+    color: var(--tg-hint);
+    margin: 0 0 8px 0;
+}
+
+.skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.skills-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}

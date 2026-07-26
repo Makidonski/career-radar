@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>CareerRadar</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>📡 CareerRadar</h1>
+    </header>
+
+    <main class="app-body">
+        <section class="stat-card">
+            <span class="stat-label">Медианная ЗП</span>
+            <span class="stat-value" id="median-salary">—</span>
+        </section>
+
+        <section class="stat-card">
+            <span class="stat-label">Вакансий за неделю</span>
+            <span class="stat-value" id="weekly-count">—</span>
+        </section>
+
+        <section class="chart-card">
+            <h2>Тренд спроса</h2>
+            <canvas id="trendChart" height="160"></canvas>
+        </section>
+
+        <section class="chart-card">
+            <h2>Топ навыков</h2>
+            <ul id="skills-list" class="skills-list"></ul>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

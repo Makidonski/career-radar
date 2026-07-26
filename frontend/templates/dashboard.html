@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerRadar — Дашборд</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <h1>📡 CareerRadar</h1>
+        <span class="user-badge">{{ user.username }}</span>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="filters-bar">
+            <input id="filter-skill" type="text" placeholder="Навык (например Python)">
+            <input id="filter-city" type="text" placeholder="Город">
+            <button id="apply-filters">Применить</button>
+        </section>
+
+        <section class="card">
+            <h2>Динамика зарплат</h2>
+            <canvas id="salaryChart"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Тренд спроса (вакансии по неделям)</h2>
+            <canvas id="demandChart"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Топ навыков</h2>
+            <canvas id="skillsChart"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Вакансии по городам</h2>
+            <canvas id="citiesChart"></canvas>
+        </section>
+    </main>
+
+    <script>
+        window.CAREER_RADAR_CONFIG = {
+            fastapiBaseUrl: "{{ request.scheme }}://{{ request.get_host }}/analytics-api"
+        };
+    </script>
+    <script src="{% static 'js/charts.js' %}"></script>
+</body>
+</html>
