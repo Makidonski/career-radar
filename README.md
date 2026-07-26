@@ -78,6 +78,6 @@ CI (`.github/workflows/ci.yml`) прогоняет линтер и тесты н
 -  Telegram-бот: /start (привязка аккаунта), /digest, /stats, /alerts, /newalert
 -  Telegram Mini App: компактный мобильный дашборд
 -  Веб-дашборд с Chart.js (тренд, зарплаты, навыки, города)
--  Docker Compose, Nginx reverse proxy, GitHub Actions CI, ruff, pytest
+-  Docker Compose, Nginx reverse proxy, GitHub Actions CI, ruff, pytest.
 
 
