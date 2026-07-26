@@ -69,24 +69,15 @@ CI (`.github/workflows/ci.yml`) прогоняет линтер и тесты н
 
 ## Что реализовано
 
-- ✅ Парсер hh.ru API с ретраями и обработкой rate limit (429)
-- ✅ Нормализация зарплат (API-объекты и свободный текст)
-- ✅ Django-ядро: пользователи, вакансии, алерты, история просмотров, admin
-- ✅ Celery + Celery Beat: сбор по расписанию, рассылка алертов
-- ✅ FastAPI: медианная/средняя ЗП, топ навыков, тренд спроса, прогноз
+-  Парсер hh.ru API с ретраями и обработкой rate limit (429)
+-  Нормализация зарплат (API-объекты и свободный текст)
+-  Django-ядро: пользователи, вакансии, алерты, история просмотров, admin
+-  Celery + Celery Beat: сбор по расписанию, рассылка алертов
+-  FastAPI: медианная/средняя ЗП, топ навыков, тренд спроса, прогноз
   (Simple Exponential Smoothing), скоринг вакансий под профиль
-- ✅ Telegram-бот: /start (привязка аккаунта), /digest, /stats, /alerts, /newalert
-- ✅ Telegram Mini App: компактный мобильный дашборд
-- ✅ Веб-дашборд с Chart.js (тренд, зарплаты, навыки, города)
-- ✅ Docker Compose, Nginx reverse proxy, GitHub Actions CI, ruff, pytest
+-  Telegram-бот: /start (привязка аккаунта), /digest, /stats, /alerts, /newalert
+-  Telegram Mini App: компактный мобильный дашборд
+-  Веб-дашборд с Chart.js (тренд, зарплаты, навыки, города)
+-  Docker Compose, Nginx reverse proxy, GitHub Actions CI, ruff, pytest
 
-## Возможные улучшения (roadmap)
 
-- Полноценный `/analytics/cities` эндпоинт вместо клиентского перебора
-  городов на дашборде
-- Prophet вместо Simple Exponential Smoothing для более точного прогноза
-  на длинных рядах
-- Пер-пользовательские DRF-токены для бота вместо схемы "internal secret +
-  chat_id" (сейчас это осознанное упрощение MVP)
-- HTML-парсер (BeautifulSoup) как второй ParsingSource, если понадобятся
-  источники без публичного API
